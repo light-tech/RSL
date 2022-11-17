@@ -35,7 +35,9 @@ target_link_libraries(rsl PUBLIC
     tl_expected::tl_expected
 )
 
-add_subdirectory(docs)
+if(BUILD_DOCS)
+    add_subdirectory(docs)
+endif()
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
